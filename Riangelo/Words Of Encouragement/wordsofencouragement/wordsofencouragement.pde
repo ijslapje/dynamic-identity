@@ -16,9 +16,9 @@
 import ddf.minim.*;
 import ddf.minim.ugens.*;
 import processing.serial.*;
-import processing.video.*;
+//import processing.video.*;
 import processing.sound.*;
-Capture cam;
+//Capture cam;
 
 //Minim minim;
 
@@ -470,105 +470,105 @@ void unusedWaveclock(){
   line(x1, y1, x2, y2);
 }
 
-void cameraThings(){
-  if (cam.available()) {
-     cam.read();
-  }
-  //drawin wit cam
-  background(0);
-  fill(255);
-  noStroke();
-  float tiles = 200;
-  float tileSize = width/tiles;
-  translate(tileSize/2,tileSize/2);
-  for (int x = 0; x < tiles; x++) {
-    float  red = 241;
-      float  green = map(x, 0, tiles, 102, 185);
-      float  blue = map (x, 0, tiles, 106, 12);
-    for (int y = 0; y < tiles; y++) {
-      color c = cam.get(int(x*tileSize),int(y*tileSize));
-      float size = map(brightness(c),0,255,tileSize,0);
+//void cameraThings(){
+//  if (cam.available()) {
+//     cam.read();
+//  }
+//  //drawin wit cam
+//  background(0);
+//  fill(255);
+//  noStroke();
+//  float tiles = 200;
+//  float tileSize = width/tiles;
+//  translate(tileSize/2,tileSize/2);
+//  for (int x = 0; x < tiles; x++) {
+//    float  red = 241;
+//      float  green = map(x, 0, tiles, 102, 185);
+//      float  blue = map (x, 0, tiles, 106, 12);
+//    for (int y = 0; y < tiles; y++) {
+//      color c = cam.get(int(x*tileSize),int(y*tileSize));
+//      float size = map(brightness(c),0,255,tileSize,0);
       
       
-      fill(red, green, blue);
+//      fill(red, green, blue);
       
-      ellipse(x*tileSize, y*tileSize, size, size);
-    }
-  }
-  stroke(255);
+//      ellipse(x*tileSize, y*tileSize, size, size);
+//    }
+//  }
+//  stroke(255);
  
  
   
-  //if ( recorder.isRecording() )
-  //{
-  //  text("Now recording, press the r key to stop recording.", 5, 15);
-  //}
-  //else if ( !recorded )
-  //{
-  //  text("Press the r key to start recording.", 5, 15);
-  //}
-  //else
-  //{
-  //  text("Press the s key to save the recording to disk and play it back in the sketch.", 5, 15);
-  //}
-}
+//  //if ( recorder.isRecording() )
+//  //{
+//  //  text("Now recording, press the r key to stop recording.", 5, 15);
+//  //}
+//  //else if ( !recorded )
+//  //{
+//  //  text("Press the r key to start recording.", 5, 15);
+//  //}
+//  //else
+//  //{
+//  //  text("Press the s key to save the recording to disk and play it back in the sketch.", 5, 15);
+//  //}
+//}
 
-void cameraSpiral(){
-  if (cam.available()) {
-     cam.read();
-  }
-  float moduloTime = time % 5000;
+//void cameraSpiral(){
+//  if (cam.available()) {
+//     cam.read();
+//  }
+//  float moduloTime = time % 5000;
   
-  float newGreen = map(moduloTime, 0, 5000, 102, 185);
-  float newBlue = map(moduloTime, 0, 5000, 106, 12);
+//  float newGreen = map(moduloTime, 0, 5000, 102, 185);
+//  float newBlue = map(moduloTime, 0, 5000, 106, 12);
   
-   drawSquiggle(255, 255, 255, 100);
-   drawSquiggle(255, 255, 255, 150);
-   drawSquiggle(255, 255, 255, 175);
-   squiggleRadius = 300;
-  PGraphics maskVideo = createGraphics(width, height);
-        maskVideo.beginDraw();
-        maskVideo.rectMode(CORNER);
-        maskVideo.background(0) ;//black so only the shape draw
-        maskVideo.stroke(255);
-        maskVideo.strokeWeight(3);
-        //maskVideo.noFill();//draw with white so it gets shown
-        //for(int i=0; i<= height; i+= 10){
-        //  maskVideo.line(0, i, width, i);
-        //}
+//   drawSquiggle(255, 255, 255, 100);
+//   drawSquiggle(255, 255, 255, 150);
+//   drawSquiggle(255, 255, 255, 175);
+//   squiggleRadius = 300;
+//  PGraphics maskVideo = createGraphics(width, height);
+//        maskVideo.beginDraw();
+//        maskVideo.rectMode(CORNER);
+//        maskVideo.background(0) ;//black so only the shape draw
+//        maskVideo.stroke(255);
+//        maskVideo.strokeWeight(3);
+//        //maskVideo.noFill();//draw with white so it gets shown
+//        //for(int i=0; i<= height; i+= 10){
+//        //  maskVideo.line(0, i, width, i);
+//        //}
         
-        maskVideo.beginShape();
-   maskVideo.fill(255);
-   maskVideo.stroke(255 , 0, 0);
-   int multiplier = 30;
-  for(float newAngle = angle; newAngle <= angle+ 360; newAngle+=0.5){
-    noiseVal += 0.1;
-    float rad = radians(newAngle);
-    radiusVariance = multiplier * customNoise(noiseVal);
-    thisRadius = squiggleRadius + radiusVariance;
+//        maskVideo.beginShape();
+//   maskVideo.fill(255);
+//   maskVideo.stroke(255 , 0, 0);
+//   int multiplier = 30;
+//  for(float newAngle = angle; newAngle <= angle+ 360; newAngle+=0.5){
+//    noiseVal += 0.1;
+//    float rad = radians(newAngle);
+//    radiusVariance = multiplier * customNoise(noiseVal);
+//    thisRadius = squiggleRadius + radiusVariance;
     
     
    
-    x  = centX + (cos(rad) * thisRadius /3*2);
-    y = centY + (sin(rad) * thisRadius/3  * 2);
-    maskVideo.curveVertex(x, y);
+//    x  = centX + (cos(rad) * thisRadius /3*2);
+//    y = centY + (sin(rad) * thisRadius/3  * 2);
+//    maskVideo.curveVertex(x, y);
     
     
     
-  }
-  maskVideo.endShape(); 
-        maskVideo.endDraw();
+//  }
+//  maskVideo.endShape(); 
+//        maskVideo.endDraw();
    
-        cam.mask(maskVideo);
-        //tint(255,192,203);
+//        cam.mask(maskVideo);
+//        //tint(255,192,203);
         
-         tint(red, newGreen, newBlue);
-       image(cam,0,0,width,height);
+//         tint(red, newGreen, newBlue);
+//       image(cam,0,0,width,height);
         
-        fill(#ffffff);
-        noStroke();
-        rectMode(CENTER); 
-}
+//        fill(#ffffff);
+//        noStroke();
+//        rectMode(CENTER); 
+//}
 
 void drawSquiggle(int red, int green, int blue, int multiplier) {
   beginShape();
