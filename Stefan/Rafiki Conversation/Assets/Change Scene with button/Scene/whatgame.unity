@@ -798,12 +798,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3543957c6db369a4095f318bb31d109b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextConversationOne: Scene1
-  nextConversationTwo: Scene2
-  nextConversationThree: Bye
-  nextConversationFour: 
-  nextConversationFive: 
-  nextConversationSix: 
+  nextConversationOne: istheremaybesomething
+  nextConversationTwo: istheremaybesomething
+  nextConversationThree: istheremaybesomething
+  nextConversationFour: istheremaybesomething
+  nextConversationFive: istheremaybesomething
+  nextConversationSix: istheremaybesomething
 --- !u!1 &867521992
 GameObject:
   m_ObjectHideFlags: 0
