@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Change Scene with button/Scene/Opening.unity
+    guid: 50fb258b80141ef42ab608900f81c878
+  - enabled: 1
     path: Assets/Change Scene with button/Scene/ohheythere.unity
     guid: efdc36132ed2bfa4f8ab1b42caeebd85
   - enabled: 1
@@ -74,9 +77,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Change Scene with button/Scene/whattypeofmusic.unity
     guid: a7f94459151e3a84e830e89b033a9566
-  - enabled: 1
-    path: Assets/Change Scene with button/Scene/Opening.unity
-    guid: 50fb258b80141ef42ab608900f81c878
   - enabled: 1
     path: Assets/Change Scene with button/Scene/Retry.unity
     guid: 49e168cd936685c4297d43f1b68e6cf3

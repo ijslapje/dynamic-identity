@@ -800,10 +800,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextConversationOne: howareyoufeeling
   nextConversationTwo: howareyoufeeling
-  nextConversationThree: 
-  nextConversationFour: 
-  nextConversationFive: 
-  nextConversationSix: 
+  nextConversationThree: howareyoufeeling
+  nextConversationFour: howareyoufeeling
+  nextConversationFive: howareyoufeeling
+  nextConversationSix: howareyoufeeling
 --- !u!1 &867521992
 GameObject:
   m_ObjectHideFlags: 0
